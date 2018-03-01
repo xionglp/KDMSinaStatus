@@ -1,0 +1,63 @@
+//
+//  Sina-PrefixHeader.pch
+//  SinaStatus
+//
+//  Created by 熊鲁平 on 15/7/30.
+//  Copyright (c) 2015年 XLP. All rights reserved.
+//
+
+#ifndef SinaStatus_Sina_PrefixHeader_pch
+#define SinaStatus_Sina_PrefixHeader_pch
+
+#endif
+
+
+//#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Estension.h"
+#import "UIImage+Estension.h"
+
+#define NavBarTitleFont [UIFont systemFontOfSize:20]   //导航栏标题文字大小
+#define SinaColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]  // RGB自定义颜色
+
+//应用的信息
+#define client_id @"3871670971"
+#define redirect_uri @"http://www.baidu.com"
+#define client_secret @"0fa40c618c2ea7610b8472bd57207765"
+
+// 屏幕尺寸
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+
+//tableView的背景色
+#define TableViewBackgroundColor SinaColor(211, 211, 211)
+
+// cell的计算参数
+// cell的内边距
+#define StatusCellInset 10
+
+// 原创微博昵称字体
+#define StatusOrginalNameFont [UIFont systemFontOfSize:13]
+// 原创微博时间字体
+#define StatusOrginalTimeFont [UIFont systemFontOfSize:11]
+// 原创微博来源字体
+#define StatusOrginalSourceFont StatusOrginalTimeFont
+// 原创微博正文字体
+#define StatusOrginalTextFont [UIFont systemFontOfSize:14]
+
+// 转发微博昵称字体
+#define StatusRetweetedNameFont StatusOrginalNameFont
+// 转发微博正文字体
+#define StatusRetweetedTextFont StatusOrginalTextFont
+
+
+#ifdef DEBUG // 调试状态, 打开LOG功能
+
+#define SinaLog(...) NSLog(__VA_ARGS__)
+#else // 发布状态, 关闭LOG功能
+#define NSLog(...)
+
+
+
+#endif
